@@ -1,10 +1,8 @@
 # aprender-graphql-lumen
 
-
-
-php artisan make:graphql:type FooType 
-php artisan make:graphql:query FooQueryi 
-php artisan make:graphql:mutation FooMutationi 
+php artisan make:graphql:type FooType  
+php artisan make:graphql:query FooQuery  
+php artisan make:graphql:mutation FooMutation  
 
 ```graphql
 {
