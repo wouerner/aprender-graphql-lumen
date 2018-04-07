@@ -1,0 +1,9 @@
+version: '2'
+services:
+  web:
+    build: . # build da imagem local
+    container_name: aprender-graphql-lumen
+    mem_limit: 1g # limitar espaço do container em memoria
+    restart: always
+    volumes:
+     - ../:/var/www/html
