@@ -59,3 +59,5 @@ php artisan make:graphql:mutation FooMutation
 Profundamente inspirado nesse video:
 https://www.youtube.com/watch?v=KaxB8wPeTkI
 
+Link uteis para estudos:  
+https://github.com/chentsulin/awesome-graphql
