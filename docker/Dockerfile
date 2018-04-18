@@ -8,7 +8,9 @@ RUN DEBIAN_FRONTEND=noninteractive && apt-get install -y php-curl curl
 RUN DEBIAN_FRONTEND=noninteractive && apt-get install -y php-xml
 RUN apt update
 RUN DEBIAN_FRONTEND=noninteractive && apt-get install -y php-sqlite3 
+RUN DEBIAN_FRONTEND=noninteractive && apt-get install -y php-mbstring 
 RUN DEBIAN_FRONTEND=noninteractive && apt-get install -y vim 
+RUN DEBIAN_FRONTEND=noninteractive && apt-get install -y git 
 RUN a2enmod rewrite
 RUN a2enmod headers 
 
