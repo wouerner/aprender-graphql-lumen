@@ -5,7 +5,7 @@ Este projeto tem como objetivo criar um passo-a-passo de como usar GraphQL + Lum
 
 ## Pré-requisito
  * PHP nivel básico
- * Ter usado algum framework (Ruby em rail, Django ou Lumen)
+ * Ter usado algum framework (Ruby on Rails, Django ou Lumen)
  * Docker/Docker Compose nivel basico
 
 ## Instalação
