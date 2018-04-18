@@ -124,11 +124,12 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-                'carro' => App\GraphQL\Query\CarroQuery::class
+                'pais' => App\GraphQL\Query\PaisQuery::class,
+                'regiao' => App\GraphQL\Query\RegiaoQuery::class,
+                'comida' => App\GraphQL\Query\ComidaQuery::class,
             ],
             'mutation' => [
-                'createCarro' => App\GraphQL\Mutation\CarroMutation::class
-
+                'createPais' => App\GraphQL\Mutation\PaisMutation::class
             ]
         ]
     ],
@@ -182,7 +183,9 @@ return [
      * ]
      */
     'types' => [
-        App\GraphQL\Type\CarroType::class
+        App\GraphQL\Type\PaisType::class,
+        App\GraphQL\Type\RegiaoType::class,
+        App\GraphQL\Type\ComidaType::class
     ],
 
     /*

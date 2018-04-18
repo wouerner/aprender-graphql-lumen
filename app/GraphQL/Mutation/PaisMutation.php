@@ -7,7 +7,9 @@ use GraphQL\Type\Definition\ResolveInfo;
 use GraphQL\Type\Definition\Type;
 use GraphQL;
 
-class CarroMutation extends Mutation
+use App\Models\Pais;
+
+class PaisMutation extends Mutation
 {
     protected $attributes = [
         'name' => 'CarroMutation',
@@ -16,26 +18,28 @@ class CarroMutation extends Mutation
 
     public function type()
     {
-        return GraphQL::type('Carro');
+        return GraphQL::type('Pais');
     }
 
     public function args()
     {
         return [
             'id' => [
-                'type' => Type::nonNull(Type::int())
+                'type' => Type::int()
             ],
             'nome' => [
                 'type' => Type::string()
             ],
-            'modelo' => [
-                'type' => Type::string()
-            ]
         ];
     }
 
     public function resolve($root, $args, $context, ResolveInfo $info)
     {
-        return ['id' => '1', 'nome' => 'Corsa', 'modelo' => 'vhc-e'];
+        $pais = new Pais();
+
+        $pais->nome = $args['nome'];
+        $pais->save();
+
+        return $pais;
     }
 }

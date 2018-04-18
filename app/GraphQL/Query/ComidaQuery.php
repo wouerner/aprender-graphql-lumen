@@ -7,29 +7,32 @@ use GraphQL\Type\Definition\ResolveInfo;
 use GraphQL\Type\Definition\Type;
 use GraphQL;
 
-class CarroQuery extends Query
+use App\Models\Comida;
+
+class ComidaQuery extends Query
 {
     protected $attributes = [
-        'name' => 'CarroQuery',
-        'description' => 'A query for carro'
+        'name' => 'ComidaQuery',
+        'description' => 'A query Comida'
     ];
 
     public function type()
     {
-        return GraphQL::type('Carro');
+        return GraphQL::type('Comida');
     }
 
     public function args()
     {
         return [
-            'id'  =>[
-                'type' => Type::nonNull(Type::string())
+            'id' => [
+                'type' => Type::nonNull(Type::id())
             ]
         ];
     }
 
     public function resolve($root, $args, $context, ResolveInfo $info)
     {
-        return ['id' => '1', 'nome' => 'Corsa', 'modelo' => 'vhc-e'];
+        $result = Comida::find($args['id']);
+        return $result;
     }
 }

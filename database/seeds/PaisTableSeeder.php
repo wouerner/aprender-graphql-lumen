@@ -13,26 +13,31 @@ class PaisTableSeeder extends Seeder
     public function run()
     {
         DB::table('pais')->insert([
-            'nome' => str_random(10),
+            'nome' => 'Brasil',
         ]);
 
         DB::table('pais')->insert([
-            'nome' => str_random(10),
+            'nome' => 'Argentina',
         ]);
 
         DB::table('regioes')->insert([
             'pais_id' => 1,
-            'nome' => str_random(10),
+            'nome' => 'Norte',
         ]);
 
         DB::table('regioes')->insert([
             'pais_id' => 1,
-            'nome' => str_random(10),
+            'nome' => 'Nordeste',
         ]);
 
         DB::table('comidas')->insert([
             'regiao_id' => 1,
-            'nome' => str_random(10),
+            'nome' => 'acarajé',
+        ]);
+
+        DB::table('comidas')->insert([
+            'regiao_id' => 1,
+            'nome' => 'cuscuz',
         ]);
     }
 }
