@@ -1,7 +1,12 @@
-# aprender-graphql-lumen
+# Aprender GraphQL + Lumen Micro Framework
 ## Objetivo
 
-Este projeto tem como objetivo criar um passo-a-passo de como usar GraphQL + Lumen  
+Este projeto tem como objetivo criar um passo-a-passo de como usar GraphQL + Lumen
+
+## Pré-requisito
+ * PHP nivel básico
+ * Ter usado algum framework (Ruby em rail, Django ou Lumen)
+ * Docker/Docker Compose nivel basico
 
 ## Instalação
 Dependencias:
