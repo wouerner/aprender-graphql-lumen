@@ -33,10 +33,14 @@ Acesse: http://[ip]/graphiql  --> plugin para fazer consultas em graphql.
 Exemplos de consultas(querys):
 ```graphql
 {
-  carro(id: 1) {
-    id
+  pais(id: 1) {
     nome
-    modelo
+    regioes(id: 2) {
+      nome
+      comidas {
+        nome
+      }
+    }
   }
 }
 ```
@@ -44,14 +48,14 @@ Exemplos de consultas(querys):
 Exemplo de modificaçes(mutation):
 
 ```graphql
-mutation{
-  createCarro(
-    id: 1
-    nome: "teste"
+mutation {
+  createPais (
+  nome: "Chile"
   ) {
-    nome
+    id
   }
 }
+
 ```
 Esse projeto usou esses comando para gerar os arquivos:
 
